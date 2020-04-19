@@ -1,0 +1,74 @@
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+.container {
+    margin: auto;
+    max-width: 1200px;
+}
+
+.trenings {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table {
+    width: 100%;
+}
+
+.table__head {
+    background-color: rgb(6, 41, 17);
+    color: white;
+    text-transform: uppercase;
+}
+
+.table__col {
+    padding: 5px;
+    text-align: center;
+}
+
+.table__col--body {
+    background-color: rgb(190, 229, 192);
+}
+
+.add_trening {
+    position: fixed;
+    bottom: 0px;
+    max-width: 1200px;
+    padding: 50px 20px 50px 20px;
+    background-color: rgb(142, 223, 223);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.title {
+    text-align: center;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+}
+
+.form__label {
+    flex-basis: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px auto;
+    font-size: 1.1rem;
+}
+
+.form__text {
+    width: 65%;
+    padding: 5px;
+}
+
+.form__button {
+    flex-basis: 70%;
+    margin: 10px auto;
+    padding: 20px;
+}
