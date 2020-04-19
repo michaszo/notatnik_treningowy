@@ -40,11 +40,11 @@ body {
     background-color: rgb(142, 223, 223);
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
-    transition: 1s;
+    transition: 1s ease-out;
 }
 
 .add_trening--collapse {
-    transition: 1s;
+    transition: 1s ease-out;
     bottom: -380px;
 }
 

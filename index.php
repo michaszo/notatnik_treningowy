@@ -7,9 +7,13 @@
     <title>Trenieng</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,700&display=swap" rel="stylesheet">
-
 </head>
 
+<?php
+require_once 'CrudController.php';
+$crud = new CrudController();
+$trenings = $crud->readData();
+?>
 <body>
     <div class="container">
         <h1 class="title">100 pompek</h1>
@@ -32,14 +36,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="table__tr">
-                        <th class="table__col table__col--body">1</th>
-                        <td class="table__col table__col--body">19.04</td>
-                        <td class="table__col table__col--body">5</td>
-                        <td class="table__col table__col--body">5</td>
-                        <td class="table__col table__col--body">Na kolanach 4 <br> Z kolanami na kanapie 1</td>
-                        <td class="table__col table__col--body">Z kettelbellem 3 <br> 2 scyzoryki</td>
-                    </tr>
+                    <?php foreach ($trenings  as $trening) { ?>
+                        <tr class="table__tr">
+                            <td class="table__col table__col--body"><?= $trening[1]; ?></td>
+                            <td class="table__col table__col--body"><?= date('d-m', $trening[2]); ?></td>
+                            <td class="table__col table__col--body"><?= $trening[3]; ?></td>
+                            <td class="table__col table__col--body"><?= $trening[4]; ?></td>
+                            <td class="table__col table__col--body"><?= $trening[5]; ?></td>
+                            <td class="table__col table__col--body"><?= $trening[6]; ?></td>
+                        </tr>
+                    <?php } ?>
                 </tbody>
             </table>
         </div>
@@ -52,7 +58,7 @@
                 <label class="form__label">liczba serii brzuszków: <input type="text" class="form__text" name="crunches_series"></label>
                 <label class="form__label">wykonanie pompek: <input type="text" class="form__text" name="pushup_style"></label>
                 <label class="form__label">wykonanie brzuszków: <input type="text" class="form__text" name="crunches_style"></label>
-                <button  class="form__button" type="submit">dodaj trening</button>
+                <button class="form__button" type="submit">dodaj trening</button>
             </form>
         </div>
     </div>
