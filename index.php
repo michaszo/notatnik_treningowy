@@ -44,8 +44,8 @@
             </table>
         </div>
 
-        <div class="add_trening">
-            <h2 class="title">Dodaj nowy trening:</h2>
+        <div class="add_trening add_trening--collapse">
+            <h2 class="title add_trening__button">Dodaj nowy trening:</h2>
             <form class="form" action="add_trening.php" method="post">
                 <label class="form__label">dzień: <input type="text" class="form__text" name="day"></label>
                 <label class="form__label">liczba serii pompek: <input type="text" class="form__text" name="pushup_series"></label>
